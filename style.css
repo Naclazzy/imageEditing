@@ -140,6 +140,11 @@ button.active{
     margin-left: 5px;
 }
 
+.container.disable :where(.editor-panel, .reset-filter, .save-img) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 .wrapper .preview-img{
     flex-grow: 1;
     display: flex;
