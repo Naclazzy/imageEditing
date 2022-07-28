@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +11,20 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
 
     <div class="container">
         <h2>Image Editor</h2>
         <div class="wrapper">
             <div class="editor-panel">
-                <div class="filer">
+                <div class="filter">
                     <label for="" class="titel">Filters</label>
                     <div class="options">
-                        <button>Brightness</button>
-                        <button>Saturation</button>
-                        <button>Inversion</button>
-                        <button>Grayscale</button>
+                        <button class="active btn-1">Brightness</button>
+                        <button class="btn-1">Saturation</button>
+                        <button class="btn-1">Inversion</button>
+                        <button class="btn-1">Grayscale</button>
                     </div>
                     <div class="slider">
                         <div class="filter-info">
@@ -45,15 +47,14 @@
             <div class="preview-img">
                 <img src="img\image-placeholder.svg" alt="upload-placholder-image">
             </div>
-            <div class="controls">
-                <button class="reset-filter">Reset Filter</button>
-                <div class="row">
-                    <button class="choose-img">Choose Image</button>
-                    <button class="save-img">Save Image</button>
-                </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filter</button>
+            <div class="row">
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
             </div>
-        </div>  
+        </div>
     </div>
-    
 </body>
 </html>
