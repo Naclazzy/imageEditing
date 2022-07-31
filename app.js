@@ -3,7 +3,7 @@ const chooseImgBtn = document.querySelector(".choose-img");
 const showImage = document.querySelector(".preview-img img");  
 const filterName = document.querySelector(".filter-info .name");       
 const filterOptions = document.querySelectorAll(".filter button");  
-const filterSlider = document.querySelector(".filter-info input");     
+const filterSlider = document.getElementById("in");     
 const inputValue = document.querySelector(".value");
 
 
@@ -26,9 +26,15 @@ filterOptions.forEach(option => {
 })
 
 const updateFilter = () => {
-    console.log(filterSlider.value);
+    inputValue.innerText = filterSlider.value;
 }
 
 fileInput.addEventListener("change", loadImage)
-filterSlider.addEventListener("input", updateFilter)
+
 chooseImgBtn.addEventListener("click", () => fileInput.click());
+filterSlider.addEventListener("input", updateFilter)
+
+
+
+
+
