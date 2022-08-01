@@ -6,6 +6,7 @@ const filterOptions = document.querySelectorAll(".filter button");
 const filterSlider = document.getElementById("in");     
 const inputValue = document.querySelector(".value");
 
+let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
 
 const loadImage = () => {
     let file = fileInput.files[0];
@@ -26,7 +27,8 @@ filterOptions.forEach(option => {
 })
 
 const updateFilter = () => {
-    inputValue.innerText = filterSlider.value;
+    inputValue.innerText = `${filterSlider.value}%`;
+    const selectedFilter = document.querySelector(".filter .active")
 }
 
 fileInput.addEventListener("change", loadImage)
