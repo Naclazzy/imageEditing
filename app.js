@@ -23,12 +23,40 @@ filterOptions.forEach(option => {
         document.querySelector(".filter .active").classList.remove("active")
         option.classList.add("active");
         filterName.innerText = option.innerText;
+
+        if(option.id === "brightness"){
+            filterSlider.max = "200";
+            filterSlider.value = brightness;
+            inputValue.innerText = `${brightness}%`;
+        } else if(option.id === "saturation"){
+            filterSlider.max = "200";
+            filterSlider.value = saturation;
+            inputValue.innerText = `${saturation}%`;
+        } else if(option.id === "inversion"){
+            filterSlider.max = "100";
+            filterSlider.value = inversion; 
+            inputValue.innerText = `${inversion}%`;
+        } else if(option.id === "grayscale"){
+            filterSlider.max = "100";
+            filterSlider.value = grayscale; 
+            inputValue.innerText = `${grayscale}%`;
+        }
     })
 })
 
 const updateFilter = () => {
     inputValue.innerText = `${filterSlider.value}%`;
     const selectedFilter = document.querySelector(".filter .active")
+
+    if(selectedFilter.id === "brightness"){
+        brightness = filterSlider.value;
+    } else if(selectedFilter.id === "saturation") {
+        saturation  = filterSlider.value;
+    } else if(selectedFilter.id === "inversion"){
+        inversion = filterSlider.value;
+    } else if(selectedFilter.id === "grayscale"){
+        grayscale = filterSlider.value;
+    }
 }
 
 fileInput.addEventListener("change", loadImage)
