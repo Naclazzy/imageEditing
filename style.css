@@ -105,6 +105,7 @@ button.active{
 
 .wrapper .preview-img{
     margin-left: 20px;
+    overflow: hidden;
 }
 
 .preview-img img{
